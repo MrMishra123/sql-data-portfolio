@@ -48,9 +48,10 @@ Superstore dataset (public dataset used for analytics practice).
 ## Project Structure
 
 sql-data-portfolio/
-│
+
 ├── Superstore.csv
 ├── sales-analysis.sql
+├── customer-segmentation.sql
 └── README.md
 
 ---
