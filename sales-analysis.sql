@@ -23,7 +23,7 @@ FROM superstore
 GROUP BY Region
 ORDER BY regional_sales DESC;
 
--- 4. Monthly Sales Trend (MySQL)
+-- 4. Monthly Sales Trend
 SELECT DATE_FORMAT(`Order Date`, '%Y-%m') AS month,
        SUM(Sales) AS monthly_sales
 FROM superstore
