@@ -5,36 +5,8 @@
 
 ---
 
-## Overview
-This project analyzes retail sales data using SQL to identify revenue trends,
-top-performing products, and loss-making transactions.
-
-The goal is to simulate real-world business analysis performed by a Data Analyst.
-
----
-
 ## Dataset
 Superstore dataset (public dataset used for analytics practice).
-
----
-
-## Business Questions Answered
-
-1. What is the total revenue generated?
-2. Which products generate the most sales?
-3. Which region performs best?
-4. What are the monthly sales trends?
-5. Which orders are causing losses?
-
----
-
-## SQL Skills Demonstrated
-
-- GROUP BY & Aggregations
-- ORDER BY & LIMIT
-- Date-based analysis
-- Filtering with WHERE
-- Business-focused querying
 
 ---
 
@@ -56,6 +28,26 @@ sql-data-portfolio/
 
 ---
 
+## Project 1: Sales Performance Analysis
+
+## Overview
+This project analyzes retail sales data using SQL to identify revenue trends,
+top-performing products, and loss-making transactions.
+
+The goal is to simulate real-world business analysis performed by a Data Analyst.
+
+---
+
+## SQL Skills Demonstrated
+
+- GROUP BY & Aggregations
+- ORDER BY & LIMIT
+- Date-based analysis
+- Filtering with WHERE
+- Business-focused querying
+
+---
+
 ## Key Insight
 
 This analysis helps businesses:
@@ -64,20 +56,33 @@ This analysis helps businesses:
 - Detect loss-making transactions
 - Understand monthly sales performance.
 
-
 ---------------------------------------------------------------------------------------------------------------------------
 
 ## Project 2: Customer Segmentation
 
+
+## Overview
 This analysis identifies high-value customers, repeat buyers, and spending behavior.
 
-### Business Value:
-- Helps marketing target premium customers
-- Identifies loyal repeat buyers
-- Supports personalized promotions
 
 ### SQL Concepts Used:
 - GROUP BY
 - CASE WHEN
 - Aggregations
 - HAVING clause
+  
+
+### Key Insight:
+- Helps marketing target premium customers
+- Identifies loyal repeat buyers
+- Supports personalized promotions
+
+
+
+
+
+
+
+
+
+
