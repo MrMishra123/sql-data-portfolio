@@ -62,3 +62,21 @@ This analysis helps businesses:
 - Focus on high-performing products
 - Detect loss-making transactions
 - Understand monthly sales performance.
+
+
+---------------------------------------------------------------------------------------------------------------------------
+
+## Project 2: Customer Segmentation
+
+This analysis identifies high-value customers, repeat buyers, and spending behavior.
+
+### Business Value:
+- Helps marketing target premium customers
+- Identifies loyal repeat buyers
+- Supports personalized promotions
+
+### SQL Concepts Used:
+- GROUP BY
+- CASE WHEN
+- Aggregations
+- HAVING clause
