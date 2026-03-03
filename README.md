@@ -77,12 +77,21 @@ This analysis identifies high-value customers, repeat buyers, and spending behav
 - Identifies loyal repeat buyers
 - Supports personalized promotions
 
+---------------------------------------------------------------------------------------------------------------------------
+
+## Project 2: 
 
 
 
 
 
-
+### SQL Concepts Used:
+- CTE (Common Table Expressions)
+- Window Functions (OVER)
+- PARTITION BY
+- RANK() and DENSE_RANK()
+- LAG() for trend comparison
+- Running Totals and Percentage Calculations
 
 
 
