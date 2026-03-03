@@ -24,9 +24,11 @@ sql-data-portfolio/
 ├── Superstore.csv
 ├── sales-analysis.sql
 ├── customer-segmentation.sql
+├── layoffs.csv
+├── trend-analysis.sql
 └── README.md
 
----
+---------------------------------------------------------------------------------------------------------------------------
 
 ## Project 1: Sales Performance Analysis
 
@@ -56,7 +58,7 @@ This analysis helps businesses:
 - Detect loss-making transactions
 - Understand monthly sales performance.
 
----------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------
 
 ## Project 2: Customer Segmentation
 
@@ -64,6 +66,7 @@ This analysis helps businesses:
 ## Overview
 This analysis identifies high-value customers, repeat buyers, and spending behavior.
 
+---
 
 ### SQL Concepts Used:
 - GROUP BY
@@ -71,19 +74,21 @@ This analysis identifies high-value customers, repeat buyers, and spending behav
 - Aggregations
 - HAVING clause
   
+---
 
 ### Key Insight:
 - Helps marketing target premium customers
 - Identifies loyal repeat buyers
 - Supports personalized promotions
 
----------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------
 
-## Project 2: 
+## Project 3: Trend Analysis
 
+## Overview
+Perform advanced trend and ranking analysis on workforce reduction data using SQL.
 
-
-
+---
 
 ### SQL Concepts Used:
 - CTE (Common Table Expressions)
@@ -92,6 +97,17 @@ This analysis identifies high-value customers, repeat buyers, and spending behav
 - RANK() and DENSE_RANK()
 - LAG() for trend comparison
 - Running Totals and Percentage Calculations
+
+---
+
+ ### Key Insight
+
+This analysis helps businesses:
+
+* Monitor cumulative layoff trends over time
+* Identify top impacted companies within each industry
+* Compare year-over-year workforce reductions
+* Understand industry contribution to total layoffs per year
 
 
 
