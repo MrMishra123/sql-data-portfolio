@@ -1,4 +1,4 @@
-# SQL Sales Analysis Project
+# SQL Sales & Workforce Analysis Project
 
 **Author:** Shubham Mishra  
 **Role:** Aspiring Data Analyst
