@@ -7,6 +7,7 @@
 
 ## Dataset
 Superstore dataset (public dataset used for analytics practice).
+Layoffs dataset (public dataset used for analytics practice).
 
 ---
 
@@ -25,6 +26,7 @@ sql-data-portfolio/
 ├── sales-analysis.sql
 ├── customer-segmentation.sql
 ├── layoffs.csv
+├── Data-Cleaning.sql
 ├── trend-analysis.sql
 └── README.md
 
