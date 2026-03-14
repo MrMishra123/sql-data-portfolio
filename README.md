@@ -85,7 +85,28 @@ This analysis identifies high-value customers, repeat buyers, and spending behav
 
 --------------------------------------------------------------------------------------------------------------
 
-## Project 3: Trend Analysis
+## DATA CLEANING - LAYOFF DATASET
+
+
+### Tasks performed:
+- Removed duplicate rows
+- Standardized company and country names
+- Converted text dates into proper date format
+- Handled NULL values
+- Removed irrelevant rows
+
+---
+
+### Skills used:
+- SQL
+- CTE
+- ROW_NUMBER
+- Data cleaning techniques
+
+
+---------------------------------------------------------------------------------------------------------
+
+## Project 4: Trend Analysis
 
 ## Overview
 Perform advanced trend and ranking analysis on workforce reduction data using SQL.
