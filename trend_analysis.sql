@@ -5,7 +5,7 @@
                 b) Measuring cumulative workforce impact
                 c) Ranking companies within industries
                 d) Comparing year-over-year layoff patterns
-                e) Calculating industry contribution per year
+                e) Calculating industry contribution per year 
 -- ==========================================
 
 -- 1️⃣ Monthly Layoffs with Cumulative Total
