@@ -18,7 +18,7 @@ Layoffs dataset (public dataset used for analytics practice).
 
 ---
 
-## Project Structure
+## Projects Structure
 
 sql-data-portfolio/
 
