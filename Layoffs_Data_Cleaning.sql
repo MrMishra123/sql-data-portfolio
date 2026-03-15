@@ -1,62 +1,96 @@
--- 1. Create Table
 
-CREATE TABLE layoffs_raw (
-company TEXT,
-location TEXT,
-industry TEXT,
-total_laid_off INT,
-percentage_laid_off TEXT,
-date TEXT,
-stage TEXT,
-country TEXT
-);
+--   1. CREATE STAGING TABLE
+  
 
--- 2. Remove Duplicates using ROW_NUMBER()
+CREATE TABLE layoffs_staging
+LIKE layoffs;
 
-WITH duplicates AS (
+INSERT INTO layoffs_staging
+SELECT *
+FROM layoffs;
+
+
+
+--   2. REMOVE DUPLICATES
+   
+
+WITH duplicate_cte AS (
 SELECT *,
 ROW_NUMBER() OVER(
-PARTITION BY company, location, industry, total_laid_off
-ORDER BY company
-) AS rn
-FROM layoffs_raw
+PARTITION BY company, location, industry,
+total_laid_off, percentage_laid_off,
+date, stage, country, funds_raised_millions
+) AS row_num
+FROM layoffs_staging
 )
 
 DELETE
-FROM duplicates
-WHERE rn > 1;
+FROM duplicate_cte
+WHERE row_num > 1;
 
 
--- 3. Standardize Text
 
-UPDATE layoffs_raw
-SET country = 'United States'
-WHERE country LIKE 'United States%';
+--   3. TRIM COMPANY NAMES
+  
 
-
--- 4. TRIM SPACES
-
-UPDATE layoffs_raw
+UPDATE layoffs_staging
 SET company = TRIM(company);
 
 
--- 5. Fix Date Format
 
-UPDATE layoffs_raw
+--   4. STANDARDIZE INDUSTRY
+   
+
+UPDATE layoffs_staging
+SET industry = 'Crypto'
+WHERE industry LIKE 'Crypto%';
+
+
+
+--   5. CLEAN COUNTRY COLUMN
+
+
+UPDATE layoffs_staging
+SET country = TRIM(TRAILING '.' FROM country);
+
+
+/* ===============================
+   6. FIX DATE FORMAT
+   =============================== */
+
+UPDATE layoffs_staging
 SET date = STR_TO_DATE(date,'%m/%d/%Y');
 
-
--- 6. Remove Rows With No Information
-
-UPDATE layoffs_raw
-SET industry = 'Unknown'
-WHERE industry IS NULL;
+ALTER TABLE layoffs_staging
+MODIFY COLUMN date DATE;
 
 
--- 7. Final Clean Table
+
+--   7. FILL NULL INDUSTRY VALUES
+   
+
+UPDATE layoffs_staging t1
+JOIN layoffs_staging t2
+ON t1.company = t2.company
+SET t1.industry = t2.industry
+WHERE t1.industry IS NULL
+AND t2.industry IS NOT NULL;
+
+
+
+--   8. REMOVE USELESS ROWS
+   
+
+DELETE
+FROM layoffs_staging
+WHERE total_laid_off IS NULL
+AND percentage_laid_off IS NULL;
+
+
+
+--   9. CREATE FINAL CLEAN TABLE
+   
 
 CREATE TABLE layoffs_clean AS
 SELECT *
-FROM layoffs_raw;
-
-
+FROM layoffs_staging;
